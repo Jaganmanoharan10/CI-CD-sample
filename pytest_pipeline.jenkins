@@ -18,7 +18,7 @@ pipeline{
 		stage('Test'){
 			steps{
 				echo 'Automated tests on TRN DB'
-				sh 'python3 -m pytest -v -s test_adv_works_db.py'
+				sh 'python3 -m pytest -v -s test_trn_db.py'
 			}
 		}
 		
