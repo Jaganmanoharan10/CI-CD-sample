@@ -1,5 +1,6 @@
 # Test cases on TRN database
 # Employee hire date should not be greater than current date
+import pytest
 def test_hire_date(trn_cursor):
     trn_cursor.execute("select hire_date from TRN.hr.employees where hire_date > GETDATE()")
     hire_date = trn_cursor.fetchall()
