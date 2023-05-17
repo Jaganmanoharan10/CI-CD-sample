@@ -1,5 +1,5 @@
 import pytest
-import pyodbc as odbc
+import pymssql as odbc
 
 
 @pytest.fixture(scope='module')
