@@ -2,7 +2,7 @@ import pytest
 import pymssql as odbc
 
 def adv_connection():
-    conn = pymssql.connect(
+    conn = pymssql.connect(
         server='EPINCHEW00FB',
         user='CICD_DQE',
         password='Jesus@1112',
