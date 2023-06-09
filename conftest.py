@@ -3,7 +3,7 @@ import pymssql as odbc
 
 def adv_connection():
     conn = pymssql.connect(
-        'server=EPINCHEW00FB',
+        'server=EPINCHEW00FB',
         'user=CICD_DQE',
         'password=Jesus@1112',
         'database=AdventureWorks2012'
