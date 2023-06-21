@@ -4,8 +4,7 @@ import pymssql as odbc
 @pytest.fixture(scope='module')
 def adv_connection():
     conn = pymssql.connect(
-        'server=EPINCHEW00FB','user=CICD_DQE','password=Jesus@1112','database=AdventureWorks2012'
-    )
+        'server=EPINCHEW00FB','user=CICD_DQE','password=Jesus@1112','database=AdventureWorks2012')
     yield conn
     conn.close()
 
