@@ -1,6 +1,7 @@
 import pytest
 import pymssql as odbc
 
+@pytest.fixture(scope='module')
 def adv_connection():
     conn = pymssql.connect(
         'server=EPINCHEW00FB',
@@ -8,14 +9,7 @@ def adv_connection():
         'password=Jesus@1112',
         'database=AdventureWorks2012'
     )
-@pytest.fixture(scope='module')
-def adv_connection():
-    conn = odbc.connect(
-        'Driver={SQL SERVER};'
-        'Server=EPINCHEW00FB;'
-        'Database=AdventureWorks2012;'
-        'Trusted_Connection=yes;'
-    )
+
     yield conn
     conn.close()
 
